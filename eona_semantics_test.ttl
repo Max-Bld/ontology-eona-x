@@ -55,8 +55,8 @@ eona:Telecom rdfs:subClassOf eona:Equipment.
 eona:ChargingFuelInfrastructure rdfs:subClassOf eona:Equipment.
 eona:RoadNetwork rdfs:subClassOf eona:Equipment.
 
-eona:Foods rdfs:subClassOf eona:Logistics.
-eona:Goods rdfs:subClassOf eona:Logistics.
+eona:Foods rdfs:subClassOf eona:Logistic.
+eona:Goods rdfs:subClassOf eona:Logistic.
 
 eona:ExtraUrban rdfs:subClassOf eona:Mobility.
 eona:UrbanMobility rdfs:subClassOf eona:Mobility.
@@ -86,3 +86,8 @@ eona:Air rdfs:subClassOf eona:SmartEnvironment.
 eona:Waste rdfs:subClassOf eona:SmartEnvironment.
 
 eona:AllInclusivePacks rdfs:subClassOf eona:Products.
+
+eona:Equipment rdfs:subClassOf eona:Service.
+eona:Logistic rdfs:subClassOf eona:Service.
+eona:Socials rdfs:subClassOf eona:Service.
+eona:Mobility rdfs:subClassOf eona:Service.
