@@ -1,0 +1,90 @@
+@prefix eona: <https://eona-x.eu/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+eona:Sustainability a rdfs:Class.
+eona:MobilityTransportation a rdfs:Class. 
+eona:TravelerConsumer  a rdfs:Class.
+eona:TourismTerritories  a rdfs:Class.
+eona:Goods a rdfs:Class.
+
+eona:Weather rdfs:subClassOf eona:Sustainability.
+eona:Environment rdfs:subClassOf eona:Sustainability.
+eona:PeopleSocial rdfs:subClassOf eona:Sustainability.
+eona:Biodiversity rdfs:subClassOf eona:Sustainability.
+eona:IndustryImpacts rdfs:subClassOf eona:Sustainability.
+
+eona:Service rdfs:subClassOf eona:MobilityTransportation.
+eona:Node rdfs:subClassOf eona:MobilityTransportation.
+eona:Network rdfs:subClassOf eona:MobilityTransportation.
+eona:Vehicule rdfs:subClassOf eona:MobilityTransportation.
+eona:Provider rdfs:subClassOf eona:MobilityTransportation.
+
+eona:Documents rdfs:subClassOf eona:TravelerConsumer.
+eona:Experience rdfs:subClassOf eona:TravelerConsumer.
+eona:Trip rdfs:subClassOf eona:TravelerConsumer.
+eona:Profil rdfs:subClassOf eona:TravelerConsumer.
+eona:Finance rdfs:subClassOf eona:TravelerConsumer.
+
+eona:EventsActivities rdfs:subClassOf eona:TourismTerritories.
+eona:ServiceEquipments rdfs:subClassOf eona:TourismTerritories.
+eona:SmartEnvironment rdfs:subClassOf eona:TourismTerritories.
+eona:Products rdfs:subClassOf eona:TourismTerritories.
+eona:TerritoriesInfrastructure rdfs:subClassOf eona:TourismTerritories.
+
+eona:Forecast rdfs:subClassOf eona:Weather.
+eona:Today rdfs:subClassOf eona:Weather.
+eona:History rdfs:subClassOf eona:Weather.
+
+eona:AirQuality rdfs:subClassOf eona:Environment.
+eona:WaterQuality rdfs:subClassOf eona:Environment.
+eona:Noise rdfs:subClassOf eona:Environment.
+eona:LifeQuality rdfs:subClassOf eona:Environment.
+eona:RiskHealth rdfs:subClassOf eona:Environment.
+eona:Disaster rdfs:subClassOf eona:Environment.
+
+eona:Analytics rdfs:subClassOf eona:PeopleSocial.
+
+eona:NatureFaunaFlora rdfs:subClassOf eona:Biodiversity.
+
+eona:CarbonFootprint rdfs:subClassOf eona:IndustryImpacts.
+eona:Waste rdfs:subClassOf eona:IndustryImpacts.
+
+eona:Parking rdfs:subClassOf eona:Equipment.
+eona:Telecom rdfs:subClassOf eona:Equipment.
+eona:ChargingFuelInfrastructure rdfs:subClassOf eona:Equipment.
+eona:RoadNetwork rdfs:subClassOf eona:Equipment.
+
+eona:Foods rdfs:subClassOf eona:Logistics.
+eona:Goods rdfs:subClassOf eona:Logistics.
+
+eona:ExtraUrban rdfs:subClassOf eona:Mobility.
+eona:UrbanMobility rdfs:subClassOf eona:Mobility.
+eona:Multimodal rdfs:subClassOf eona:Mobility.
+
+eona:NodeInfrastructure rdfs:subClassOf eona:Node.
+eona:DepartureArrivalInfo rdfs:subClassOf eona:Node.
+
+eona:Corporation rdfs:subClassOf eona:Provider.
+eona:Product rdfs:subClassOf eona:Provider.
+eona:Route rdfs:subClassOf eona:Provider.
+eona:Operation rdfs:subClassOf eona:Provider.
+
+eona:Agenda rdfs:subClassOf eona:EventsActivities.
+eona:Activities rdfs:subClassOf eona:EventsActivities.
+
+eona:Accomodation rdfs:subClassOf eona:ServiceEquipments.
+eona:Shopping rdfs:subClassOf eona:ServiceEquipments.
+eona:Facilities rdfs:subClassOf eona:ServiceEquipments.
+eona:Equipments rdfs:subClassOf eona:ServiceEquipments.
+eona:FoodDrinks rdfs:subClassOf eona:ServiceEquipments.
+
+eona:RiskArea rdfs:subClassOf eona:SmartEnvironment.
+eona:ProtectedZone rdfs:subClassOf eona:SmartEnvironment.
+eona:Energy rdfs:subClassOf eona:SmartEnvironment.
+eona:Air rdfs:subClassOf eona:SmartEnvironment.
+eona:Waste rdfs:subClassOf eona:SmartEnvironment.
+
+eona:AllInclusivePacks rdfs:subClassOf eona:Products.
