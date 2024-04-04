@@ -1,23 +1,22 @@
-@prefix : <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl#> .
+@prefix : <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl> .
+@base <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl> .
 
-<https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl> rdf:type owl:Ontology ;
-                                                                                                         owl:versionIRI <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl> ;
-                                                                                                         owl:imports <http://vocab.gtfs.org/terms#> ,
-                                                                                                                     <https://www.w3.org/2003/01/geo/wgs84_pos.rdf> ;
-                                                                                                         <http://purl.org/dc/elements/1.1/date> "20240404"^^xsd:date ;
-                                                                                                         <http://purl.org/dc/elements/1.1/description> "Description" ;
-                                                                                                         <http://purl.org/dc/elements/1.1/title> "Eona-X Testing Ontology" ;
-                                                                                                         <http://purl.org/dc/terms/creator> "Maxime Blanchard" ;
-                                                                                                         rdfs:isDefinedBy 0 ;
-                                                                                                         rdfs:seeAlso "https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl" ;
-                                                                                                         owl:versionInfo 0.1 .
+<https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl> rdf:type owl:Ontology ;
+                                                                                                       owl:versionIRI <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl> ;
+                                                                                                       owl:imports <http://vocab.gtfs.org/terms#> ;
+                                                                                                       <http://purl.org/dc/elements/1.1/date> "20240404"^^xsd:date ;
+                                                                                                       <http://purl.org/dc/elements/1.1/description> "Description" ;
+                                                                                                       <http://purl.org/dc/elements/1.1/title> "Eona-X Testing Ontology" ;
+                                                                                                       <http://purl.org/dc/terms/creator> "Maxime Blanchard" ;
+                                                                                                       rdfs:isDefinedBy 0 ;
+                                                                                                       rdfs:seeAlso "https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl" ;
+                                                                                                       owl:versionInfo 0.1 .
 
 #################################################################
 #    Annotation properties
@@ -44,9 +43,9 @@ above the local reference ellipsoid).""" ;
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-geo:lat rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+geo:lat rdf:type owl:AnnotationProperty ;
+        rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
         rdfs:label "latitude" ;
-        rdf:type owl:AnnotationProperty ;
         rdfs:domain geo:SpatialThing .
 
 
@@ -57,9 +56,9 @@ geo:location rdf:type owl:AnnotationProperty ;
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-geo:long rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+geo:long rdf:type owl:AnnotationProperty ;
+         rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
          rdfs:label "longitude" ;
-         rdf:type owl:AnnotationProperty ;
          rdfs:domain geo:SpatialThing .
 
 
@@ -107,7 +106,8 @@ geo:location rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
 geo:Point rdf:type owl:Class ;
-          rdfs:subClassOf :Bus ;
+          rdfs:subClassOf geo:SpatialThing ,
+                          :Bus ;
           rdfs:comment """ 
 Uniquely identified by lat/long/alt. i.e.
 
@@ -129,7 +129,7 @@ geo:SpatialThing rdf:type owl:Class ;
                  rdfs:label "SpatialThing" .
 
 
-###  https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl#Bus
+###  https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl#Bus
 :Bus rdf:type owl:Class ;
      rdfs:subClassOf geo:SpatialThing .
 
