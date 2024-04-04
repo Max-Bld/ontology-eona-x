@@ -15,7 +15,7 @@
                                                                                                        <http://purl.org/dc/elements/1.1/title> "Eona-X Testing Ontology" ;
                                                                                                        <http://purl.org/dc/terms/creator> "Maxime Blanchard" ;
                                                                                                        rdfs:isDefinedBy "Testing" ;
-                                                                                                       rdfs:seeAlso "https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl" ;
+                                                                                                       rdfs:seeAlso "https://github.com/Max-Bld/eonax_ontology_prototype" ;
                                                                                                        owl:versionInfo 0 .
 
 #################################################################
@@ -97,28 +97,11 @@ geo:location rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://vocab.gtfs.org/terms#Shape
-<http://vocab.gtfs.org/terms#Shape> rdfs:subClassOf :Bus .
+<http://vocab.gtfs.org/terms#Shape> rdfs:subClassOf <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology#Bus> .
 
 
 ###  http://vocab.gtfs.org/terms#ShapePoint
-<http://vocab.gtfs.org/terms#ShapePoint> rdfs:subClassOf :Bus .
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
-geo:Point rdf:type owl:Class ;
-          rdfs:subClassOf geo:SpatialThing ,
-                          :Bus ;
-          rdfs:comment """ 
-Uniquely identified by lat/long/alt. i.e.
-
-spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
-  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
-
-sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
-  """ ,
-                       """A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  """ ;
-          rdfs:label "point" .
+<http://vocab.gtfs.org/terms#ShapePoint> rdfs:subClassOf <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology#Bus> .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
@@ -129,9 +112,9 @@ geo:SpatialThing rdf:type owl:Class ;
                  rdfs:label "SpatialThing" .
 
 
-###  https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl#Bus
-:Bus rdf:type owl:Class ;
-     rdfs:subClassOf geo:SpatialThing .
+###  https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology#Bus
+<https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology#Bus> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf geo:SpatialThing .
 
 
 #################################################################
