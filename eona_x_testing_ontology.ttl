@@ -14,9 +14,9 @@
                                                                                                        <http://purl.org/dc/elements/1.1/description> "Description" ;
                                                                                                        <http://purl.org/dc/elements/1.1/title> "Eona-X Testing Ontology" ;
                                                                                                        <http://purl.org/dc/terms/creator> "Maxime Blanchard" ;
-                                                                                                       rdfs:isDefinedBy 0 ;
-                                                                                                       rdfs:seeAlso "https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology_2.ttl" ;
-                                                                                                       owl:versionInfo 0.1 .
+                                                                                                       rdfs:isDefinedBy "Testing" ;
+                                                                                                       rdfs:seeAlso "https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_x_testing_ontology.ttl" ;
+                                                                                                       owl:versionInfo 0 .
 
 #################################################################
 #    Annotation properties
