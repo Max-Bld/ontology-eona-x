@@ -62,18 +62,18 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://www.eona-x.eu/hasEnterprise
 eona:hasEnterprise rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain <https://www.eona-x.eu/Profil> ;
-                   rdfs:range <https://www.eona-x.eu/Accomodation> ,
-                              <https://www.eona-x.eu/Equipments> ,
-                              <https://www.eona-x.eu/Facilities> ,
-                              <https://www.eona-x.eu/FoodDrinks> ,
-                              <https://www.eona-x.eu/Shopping> .
+                   rdfs:domain eona:Profil ;
+                   rdfs:range eona:Accomodation ,
+                              eona:Equipments ,
+                              eona:Facilities ,
+                              eona:FoodDrinks ,
+                              eona:Shopping .
 
 
 ###  https://www.eona-x.eu/postalAdress
 eona:postalAdress rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdfs:domain <https://www.eona-x.eu/Profil> ;
+                  rdfs:domain eona:Profil ;
                   rdfs:range eona:PostalAdress .
 
 
@@ -83,7 +83,7 @@ eona:postalAdress rdf:type owl:ObjectProperty ;
 
 ###  https://www.eona-x.eu/hasAlphanumericCode
 eona:hasAlphanumericCode rdf:type owl:DatatypeProperty ;
-                         rdfs:domain <https://www.eona-x.eu/Profil> ;
+                         rdfs:domain eona:Profil ;
                          rdfs:range xsd:string .
 
 
@@ -95,50 +95,56 @@ eona:hasCountry rdf:type owl:DatatypeProperty ;
 
 ###  https://www.eona-x.eu/hasDescription
 eona:hasDescription rdf:type owl:DatatypeProperty ;
-                    rdfs:domain <https://www.eona-x.eu/Profil> ;
+                    rdfs:domain eona:Profil ;
                     rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasEmailAdress
 eona:hasEmailAdress rdf:type owl:DatatypeProperty ;
-                    rdfs:domain <https://www.eona-x.eu/Profil> ;
+                    rdfs:domain eona:Profil ;
                     rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasFirstName
 eona:hasFirstName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <https://www.eona-x.eu/Profil> ;
+                  rdfs:domain eona:Profil ;
                   rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasLastName
 eona:hasLastName rdf:type owl:DatatypeProperty ;
-                 rdfs:domain <https://www.eona-x.eu/Profil> ;
+                 rdfs:domain eona:Profil ;
                  rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasLatLon
 eona:hasLatLon rdf:type owl:DatatypeProperty ;
-               rdfs:domain <https://www.eona-x.eu/Activities> ,
-                           <https://www.eona-x.eu/Profil> ,
-                           <https://www.eona-x.eu/ServiceEquipments> ,
-                           <https://www.eona-x.eu/TerritoriesInfrastructure> ;
+               rdfs:domain eona:Activities ,
+                           eona:Profil ,
+                           eona:ServiceEquipments ,
+                           eona:TerritoriesInfrastructure ;
                rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasLegalName
 eona:hasLegalName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <https://www.eona-x.eu/Accomodation> ,
-                              <https://www.eona-x.eu/Equipments> ,
-                              <https://www.eona-x.eu/Facilities> ,
-                              <https://www.eona-x.eu/FoodDrinks> ,
-                              <https://www.eona-x.eu/Shopping> ;
+                  rdfs:domain eona:Accomodation ,
+                              eona:Equipments ,
+                              eona:Facilities ,
+                              eona:FoodDrinks ,
+                              eona:Shopping ;
                   rdfs:range xsd:string .
+
+
+###  https://www.eona-x.eu/hasMoney
+eona:hasMoney rdf:type owl:DatatypeProperty ;
+              rdfs:domain eona:Profil ;
+              rdfs:range xsd:string .
 
 
 ###  https://www.eona-x.eu/hasPhoneNumber
 eona:hasPhoneNumber rdf:type owl:DatatypeProperty ;
-                    rdfs:domain <https://www.eona-x.eu/Profil> ;
+                    rdfs:domain eona:Profil ;
                     rdfs:range xsd:string .
 
 
@@ -156,7 +162,7 @@ eona:hasRegion rdf:type owl:DatatypeProperty ;
 
 ###  https://www.eona-x.eu/hasSiblings
 eona:hasSiblings rdf:type owl:DatatypeProperty ;
-                 rdfs:domain <https://www.eona-x.eu/Profil> ;
+                 rdfs:domain eona:Profil ;
                  rdfs:range xsd:int .
 
 
@@ -165,345 +171,345 @@ eona:hasSiblings rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  https://www.eona-x.eu/Accomodation
-<https://www.eona-x.eu/Accomodation> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://www.eona-x.eu/ServiceEquipments> .
+eona:Accomodation rdf:type owl:Class ;
+                  rdfs:subClassOf eona:ServiceEquipments .
 
 
 ###  https://www.eona-x.eu/Activities
-<https://www.eona-x.eu/Activities> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/EventsActivities> .
+eona:Activities rdf:type owl:Class ;
+                rdfs:subClassOf eona:EventsActivities .
 
 
 ###  https://www.eona-x.eu/Agenda
-<https://www.eona-x.eu/Agenda> rdf:type owl:Class ;
-                           rdfs:subClassOf <https://www.eona-x.eu/EventsActivities> .
+eona:Agenda rdf:type owl:Class ;
+            rdfs:subClassOf eona:EventsActivities .
 
 
 ###  https://www.eona-x.eu/Air
-<https://www.eona-x.eu/Air> rdf:type owl:Class ;
-                        rdfs:subClassOf <https://www.eona-x.eu/SmartEnvironment> .
+eona:Air rdf:type owl:Class ;
+         rdfs:subClassOf eona:SmartEnvironment .
 
 
 ###  https://www.eona-x.eu/AirQuality
-<https://www.eona-x.eu/AirQuality> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/Environment> .
+eona:AirQuality rdf:type owl:Class ;
+                rdfs:subClassOf eona:Environment .
 
 
 ###  https://www.eona-x.eu/AllInclusivePacks
-<https://www.eona-x.eu/AllInclusivePacks> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://www.eona-x.eu/Products> .
+eona:AllInclusivePacks rdf:type owl:Class ;
+                       rdfs:subClassOf eona:Products .
 
 
 ###  https://www.eona-x.eu/Analytics
-<https://www.eona-x.eu/Analytics> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://www.eona-x.eu/PeopleSocial> .
+eona:Analytics rdf:type owl:Class ;
+               rdfs:subClassOf eona:PeopleSocial .
 
 
 ###  https://www.eona-x.eu/Biodiversity
-<https://www.eona-x.eu/Biodiversity> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://www.eona-x.eu/Sustainability> .
+eona:Biodiversity rdf:type owl:Class ;
+                  rdfs:subClassOf eona:Sustainability .
 
 
 ###  https://www.eona-x.eu/CarbonFootprint
-<https://www.eona-x.eu/CarbonFootprint> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://www.eona-x.eu/IndustryImpacts> .
+eona:CarbonFootprint rdf:type owl:Class ;
+                     rdfs:subClassOf eona:IndustryImpacts .
 
 
 ###  https://www.eona-x.eu/ChargingFuelInfrastructure
-<https://www.eona-x.eu/ChargingFuelInfrastructure> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://www.eona-x.eu/Equipment> .
+eona:ChargingFuelInfrastructure rdf:type owl:Class ;
+                                rdfs:subClassOf eona:Equipment .
 
 
 ###  https://www.eona-x.eu/Corporation
-<https://www.eona-x.eu/Corporation> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://www.eona-x.eu/Provider> .
+eona:Corporation rdf:type owl:Class ;
+                 rdfs:subClassOf eona:Provider .
 
 
 ###  https://www.eona-x.eu/DepartureArrivalInfo
-<https://www.eona-x.eu/DepartureArrivalInfo> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://www.eona-x.eu/Node> .
+eona:DepartureArrivalInfo rdf:type owl:Class ;
+                          rdfs:subClassOf eona:Node .
 
 
 ###  https://www.eona-x.eu/Disaster
-<https://www.eona-x.eu/Disaster> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/Environment> .
+eona:Disaster rdf:type owl:Class ;
+              rdfs:subClassOf eona:Environment .
 
 
 ###  https://www.eona-x.eu/Documents
-<https://www.eona-x.eu/Documents> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://www.eona-x.eu/TravelerConsumer> .
+eona:Documents rdf:type owl:Class ;
+               rdfs:subClassOf eona:TravelerConsumer .
 
 
 ###  https://www.eona-x.eu/Energy
-<https://www.eona-x.eu/Energy> rdf:type owl:Class ;
-                           rdfs:subClassOf <https://www.eona-x.eu/SmartEnvironment> .
+eona:Energy rdf:type owl:Class ;
+            rdfs:subClassOf eona:SmartEnvironment .
 
 
 ###  https://www.eona-x.eu/Environment
-<https://www.eona-x.eu/Environment> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://www.eona-x.eu/Sustainability> .
+eona:Environment rdf:type owl:Class ;
+                 rdfs:subClassOf eona:Sustainability .
 
 
 ###  https://www.eona-x.eu/Equipment
-<https://www.eona-x.eu/Equipment> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://www.eona-x.eu/Service> .
+eona:Equipment rdf:type owl:Class ;
+               rdfs:subClassOf eona:Service .
 
 
 ###  https://www.eona-x.eu/Equipments
-<https://www.eona-x.eu/Equipments> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/ServiceEquipments> .
+eona:Equipments rdf:type owl:Class ;
+                rdfs:subClassOf eona:ServiceEquipments .
 
 
 ###  https://www.eona-x.eu/EventsActivities
-<https://www.eona-x.eu/EventsActivities> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://www.eona-x.eu/TourismTerritories> .
+eona:EventsActivities rdf:type owl:Class ;
+                      rdfs:subClassOf eona:TourismTerritories .
 
 
 ###  https://www.eona-x.eu/Experience
-<https://www.eona-x.eu/Experience> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/TravelerConsumer> .
+eona:Experience rdf:type owl:Class ;
+                rdfs:subClassOf eona:TravelerConsumer .
 
 
 ###  https://www.eona-x.eu/ExtraUrban
-<https://www.eona-x.eu/ExtraUrban> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/Mobility> .
+eona:ExtraUrban rdf:type owl:Class ;
+                rdfs:subClassOf eona:Mobility .
 
 
 ###  https://www.eona-x.eu/Facilities
-<https://www.eona-x.eu/Facilities> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/ServiceEquipments> .
+eona:Facilities rdf:type owl:Class ;
+                rdfs:subClassOf eona:ServiceEquipments .
 
 
 ###  https://www.eona-x.eu/Finance
-<https://www.eona-x.eu/Finance> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/TravelerConsumer> .
+eona:Finance rdf:type owl:Class ;
+             rdfs:subClassOf eona:TravelerConsumer .
 
 
 ###  https://www.eona-x.eu/FoodDrinks
-<https://www.eona-x.eu/FoodDrinks> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/ServiceEquipments> .
+eona:FoodDrinks rdf:type owl:Class ;
+                rdfs:subClassOf eona:ServiceEquipments .
 
 
 ###  https://www.eona-x.eu/Foods
-<https://www.eona-x.eu/Foods> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/Logistic> .
+eona:Foods rdf:type owl:Class ;
+           rdfs:subClassOf eona:Logistic .
 
 
 ###  https://www.eona-x.eu/Forecast
-<https://www.eona-x.eu/Forecast> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/Weather> .
+eona:Forecast rdf:type owl:Class ;
+              rdfs:subClassOf eona:Weather .
 
 
 ###  https://www.eona-x.eu/Goods
-<https://www.eona-x.eu/Goods> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/Logistic> .
+eona:Goods rdf:type owl:Class ;
+           rdfs:subClassOf eona:Logistic .
 
 
 ###  https://www.eona-x.eu/History
-<https://www.eona-x.eu/History> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Weather> .
+eona:History rdf:type owl:Class ;
+             rdfs:subClassOf eona:Weather .
 
 
 ###  https://www.eona-x.eu/IndustryImpacts
-<https://www.eona-x.eu/IndustryImpacts> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://www.eona-x.eu/Sustainability> .
+eona:IndustryImpacts rdf:type owl:Class ;
+                     rdfs:subClassOf eona:Sustainability .
 
 
 ###  https://www.eona-x.eu/LifeQuality
-<https://www.eona-x.eu/LifeQuality> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://www.eona-x.eu/Environment> .
+eona:LifeQuality rdf:type owl:Class ;
+                 rdfs:subClassOf eona:Environment .
 
 
 ###  https://www.eona-x.eu/Logistic
-<https://www.eona-x.eu/Logistic> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/Service> .
+eona:Logistic rdf:type owl:Class ;
+              rdfs:subClassOf eona:Service .
 
 
 ###  https://www.eona-x.eu/Mobility
-<https://www.eona-x.eu/Mobility> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/Service> .
+eona:Mobility rdf:type owl:Class ;
+              rdfs:subClassOf eona:Service .
 
 
 ###  https://www.eona-x.eu/MobilityTransportation
-<https://www.eona-x.eu/MobilityTransportation> rdf:type owl:Class .
+eona:MobilityTransportation rdf:type owl:Class .
 
 
 ###  https://www.eona-x.eu/Multimodal
-<https://www.eona-x.eu/Multimodal> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/Mobility> .
+eona:Multimodal rdf:type owl:Class ;
+                rdfs:subClassOf eona:Mobility .
 
 
 ###  https://www.eona-x.eu/NatureFaunaFlora
-<https://www.eona-x.eu/NatureFaunaFlora> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://www.eona-x.eu/Biodiversity> .
-
-
-###  https://www.eona-x.eu/Node
-<https://www.eona-x.eu/Node> rdf:type owl:Class ;
-                         rdfs:subClassOf <https://www.eona-x.eu/MobilityTransportation> .
-
-
-###  https://www.eona-x.eu/NodeInfrastructure
-<https://www.eona-x.eu/NodeInfrastructure> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://www.eona-x.eu/Node> .
-
-
-###  https://www.eona-x.eu/Noise
-<https://www.eona-x.eu/Noise> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/Environment> .
-
-
-###  https://www.eona-x.eu/Operation
-<https://www.eona-x.eu/Operation> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://www.eona-x.eu/Provider> .
-
-
-###  https://www.eona-x.eu/Parking
-<https://www.eona-x.eu/Parking> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Equipment> .
-
-
-###  https://www.eona-x.eu/PeopleSocial
-<https://www.eona-x.eu/PeopleSocial> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://www.eona-x.eu/Sustainability> .
-
-
-###  https://www.eona-x.eu/Product
-<https://www.eona-x.eu/Product> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Provider> .
-
-
-###  https://www.eona-x.eu/Products
-<https://www.eona-x.eu/Products> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/TourismTerritories> .
-
-
-###  https://www.eona-x.eu/Profil
-<https://www.eona-x.eu/Profil> rdf:type owl:Class ;
-                           rdfs:subClassOf <https://www.eona-x.eu/TravelerConsumer> .
-
-
-###  https://www.eona-x.eu/ProtectedZone
-<https://www.eona-x.eu/ProtectedZone> rdf:type owl:Class ;
-                                  rdfs:subClassOf <https://www.eona-x.eu/SmartEnvironment> .
-
-
-###  https://www.eona-x.eu/Provider
-<https://www.eona-x.eu/Provider> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/MobilityTransportation> .
-
-
-###  https://www.eona-x.eu/RiskArea
-<https://www.eona-x.eu/RiskArea> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/SmartEnvironment> .
-
-
-###  https://www.eona-x.eu/RiskHealth
-<https://www.eona-x.eu/RiskHealth> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://www.eona-x.eu/Environment> .
-
-
-###  https://www.eona-x.eu/RoadNetwork
-<https://www.eona-x.eu/RoadNetwork> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://www.eona-x.eu/Equipment> .
-
-
-###  https://www.eona-x.eu/Route
-<https://www.eona-x.eu/Route> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/Provider> .
-
-
-###  https://www.eona-x.eu/Service
-<https://www.eona-x.eu/Service> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/MobilityTransportation> .
-
-
-###  https://www.eona-x.eu/ServiceEquipments
-<https://www.eona-x.eu/ServiceEquipments> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://www.eona-x.eu/TourismTerritories> .
-
-
-###  https://www.eona-x.eu/Shopping
-<https://www.eona-x.eu/Shopping> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/ServiceEquipments> .
-
-
-###  https://www.eona-x.eu/SmartEnvironment
-<https://www.eona-x.eu/SmartEnvironment> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://www.eona-x.eu/TourismTerritories> .
-
-
-###  https://www.eona-x.eu/Socials
-<https://www.eona-x.eu/Socials> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Service> .
-
-
-###  https://www.eona-x.eu/Sustainability
-<https://www.eona-x.eu/Sustainability> rdf:type owl:Class .
-
-
-###  https://www.eona-x.eu/Telecom
-<https://www.eona-x.eu/Telecom> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Equipment> .
-
-
-###  https://www.eona-x.eu/TerritoriesInfrastructure
-<https://www.eona-x.eu/TerritoriesInfrastructure> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://www.eona-x.eu/TourismTerritories> .
-
-
-###  https://www.eona-x.eu/Today
-<https://www.eona-x.eu/Today> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/Weather> .
-
-
-###  https://www.eona-x.eu/TourismTerritories
-<https://www.eona-x.eu/TourismTerritories> rdf:type owl:Class .
-
-
-###  https://www.eona-x.eu/TravelerConsumer
-<https://www.eona-x.eu/TravelerConsumer> rdf:type owl:Class .
-
-
-###  https://www.eona-x.eu/Trip
-<https://www.eona-x.eu/Trip> rdf:type owl:Class ;
-                         rdfs:subClassOf <https://www.eona-x.eu/TravelerConsumer> .
-
-
-###  https://www.eona-x.eu/UrbanMobility
-<https://www.eona-x.eu/UrbanMobility> rdf:type owl:Class ;
-                                  rdfs:subClassOf <https://www.eona-x.eu/Mobility> .
-
-
-###  https://www.eona-x.eu/Vehicule
-<https://www.eona-x.eu/Vehicule> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://www.eona-x.eu/MobilityTransportation> .
-
-
-###  https://www.eona-x.eu/Waste
-<https://www.eona-x.eu/Waste> rdf:type owl:Class ;
-                          rdfs:subClassOf <https://www.eona-x.eu/IndustryImpacts> ,
-                                          <https://www.eona-x.eu/SmartEnvironment> .
-
-
-###  https://www.eona-x.eu/WaterQuality
-<https://www.eona-x.eu/WaterQuality> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://www.eona-x.eu/Environment> .
-
-
-###  https://www.eona-x.eu/Weather
-<https://www.eona-x.eu/Weather> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://www.eona-x.eu/Sustainability> .
+eona:NatureFaunaFlora rdf:type owl:Class ;
+                      rdfs:subClassOf eona:Biodiversity .
 
 
 ###  https://www.eona-x.eu/Network
 eona:Network rdf:type owl:Class ;
-             rdfs:subClassOf <https://www.eona-x.eu/MobilityTransportation> .
+             rdfs:subClassOf eona:MobilityTransportation .
+
+
+###  https://www.eona-x.eu/Node
+eona:Node rdf:type owl:Class ;
+          rdfs:subClassOf eona:MobilityTransportation .
+
+
+###  https://www.eona-x.eu/NodeInfrastructure
+eona:NodeInfrastructure rdf:type owl:Class ;
+                        rdfs:subClassOf eona:Node .
+
+
+###  https://www.eona-x.eu/Noise
+eona:Noise rdf:type owl:Class ;
+           rdfs:subClassOf eona:Environment .
+
+
+###  https://www.eona-x.eu/Operation
+eona:Operation rdf:type owl:Class ;
+               rdfs:subClassOf eona:Provider .
+
+
+###  https://www.eona-x.eu/Parking
+eona:Parking rdf:type owl:Class ;
+             rdfs:subClassOf eona:Equipment .
+
+
+###  https://www.eona-x.eu/PeopleSocial
+eona:PeopleSocial rdf:type owl:Class ;
+                  rdfs:subClassOf eona:Sustainability .
 
 
 ###  https://www.eona-x.eu/PostalAdress
 eona:PostalAdress rdf:type owl:Class ;
-                  rdfs:subClassOf <https://www.eona-x.eu/Documents> .
+                  rdfs:subClassOf eona:Documents .
+
+
+###  https://www.eona-x.eu/Product
+eona:Product rdf:type owl:Class ;
+             rdfs:subClassOf eona:Provider .
+
+
+###  https://www.eona-x.eu/Products
+eona:Products rdf:type owl:Class ;
+              rdfs:subClassOf eona:TourismTerritories .
+
+
+###  https://www.eona-x.eu/Profil
+eona:Profil rdf:type owl:Class ;
+            rdfs:subClassOf eona:TravelerConsumer .
+
+
+###  https://www.eona-x.eu/ProtectedZone
+eona:ProtectedZone rdf:type owl:Class ;
+                   rdfs:subClassOf eona:SmartEnvironment .
+
+
+###  https://www.eona-x.eu/Provider
+eona:Provider rdf:type owl:Class ;
+              rdfs:subClassOf eona:MobilityTransportation .
+
+
+###  https://www.eona-x.eu/RiskArea
+eona:RiskArea rdf:type owl:Class ;
+              rdfs:subClassOf eona:SmartEnvironment .
+
+
+###  https://www.eona-x.eu/RiskHealth
+eona:RiskHealth rdf:type owl:Class ;
+                rdfs:subClassOf eona:Environment .
+
+
+###  https://www.eona-x.eu/RoadNetwork
+eona:RoadNetwork rdf:type owl:Class ;
+                 rdfs:subClassOf eona:Equipment .
+
+
+###  https://www.eona-x.eu/Route
+eona:Route rdf:type owl:Class ;
+           rdfs:subClassOf eona:Provider .
+
+
+###  https://www.eona-x.eu/Service
+eona:Service rdf:type owl:Class ;
+             rdfs:subClassOf eona:MobilityTransportation .
+
+
+###  https://www.eona-x.eu/ServiceEquipments
+eona:ServiceEquipments rdf:type owl:Class ;
+                       rdfs:subClassOf eona:TourismTerritories .
+
+
+###  https://www.eona-x.eu/Shopping
+eona:Shopping rdf:type owl:Class ;
+              rdfs:subClassOf eona:ServiceEquipments .
+
+
+###  https://www.eona-x.eu/SmartEnvironment
+eona:SmartEnvironment rdf:type owl:Class ;
+                      rdfs:subClassOf eona:TourismTerritories .
+
+
+###  https://www.eona-x.eu/Socials
+eona:Socials rdf:type owl:Class ;
+             rdfs:subClassOf eona:Service .
+
+
+###  https://www.eona-x.eu/Sustainability
+eona:Sustainability rdf:type owl:Class .
+
+
+###  https://www.eona-x.eu/Telecom
+eona:Telecom rdf:type owl:Class ;
+             rdfs:subClassOf eona:Equipment .
+
+
+###  https://www.eona-x.eu/TerritoriesInfrastructure
+eona:TerritoriesInfrastructure rdf:type owl:Class ;
+                               rdfs:subClassOf eona:TourismTerritories .
+
+
+###  https://www.eona-x.eu/Today
+eona:Today rdf:type owl:Class ;
+           rdfs:subClassOf eona:Weather .
+
+
+###  https://www.eona-x.eu/TourismTerritories
+eona:TourismTerritories rdf:type owl:Class .
+
+
+###  https://www.eona-x.eu/TravelerConsumer
+eona:TravelerConsumer rdf:type owl:Class .
+
+
+###  https://www.eona-x.eu/Trip
+eona:Trip rdf:type owl:Class ;
+          rdfs:subClassOf eona:TravelerConsumer .
+
+
+###  https://www.eona-x.eu/UrbanMobility
+eona:UrbanMobility rdf:type owl:Class ;
+                   rdfs:subClassOf eona:Mobility .
+
+
+###  https://www.eona-x.eu/Vehicule
+eona:Vehicule rdf:type owl:Class ;
+              rdfs:subClassOf eona:MobilityTransportation .
+
+
+###  https://www.eona-x.eu/Waste
+eona:Waste rdf:type owl:Class ;
+           rdfs:subClassOf eona:IndustryImpacts ,
+                           eona:SmartEnvironment .
+
+
+###  https://www.eona-x.eu/WaterQuality
+eona:WaterQuality rdf:type owl:Class ;
+                  rdfs:subClassOf eona:Environment .
+
+
+###  https://www.eona-x.eu/Weather
+eona:Weather rdf:type owl:Class ;
+             rdfs:subClassOf eona:Sustainability .
 
 
 #################################################################
