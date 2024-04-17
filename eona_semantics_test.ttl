@@ -62,6 +62,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://www.eona-x.eu/hasEnterprise
 eona:hasEnterprise rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdf:type owl:TransitiveProperty ;
                    rdfs:domain eona:Profil ;
                    rdfs:range eona:Accomodation ,
                               eona:Equipments ,
@@ -70,9 +71,21 @@ eona:hasEnterprise rdf:type owl:ObjectProperty ;
                               eona:Shopping .
 
 
+###  https://www.eona-x.eu/isFromDataSource
+eona:isFromDataSource rdf:type owl:ObjectProperty ,
+                               owl:TransitiveProperty ;
+                      rdfs:domain eona:MobilityTransportation ,
+                                  eona:PostalAdress ,
+                                  eona:Sustainability ,
+                                  eona:TourismTerritories ,
+                                  eona:TravelerConsumer ;
+                      rdfs:range eona:Metadata .
+
+
 ###  https://www.eona-x.eu/postalAdress
 eona:postalAdress rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:TransitiveProperty ;
                   rdfs:domain eona:Profil ;
                   rdfs:range eona:PostalAdress .
 
@@ -80,6 +93,12 @@ eona:postalAdress rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://www.eona-x.eu/accessedWhen
+eona:accessedWhen rdf:type owl:DatatypeProperty ;
+                  rdfs:domain eona:Metadata ;
+                  rdfs:range xsd:string .
+
 
 ###  https://www.eona-x.eu/hasAlphanumericCode
 eona:hasAlphanumericCode rdf:type owl:DatatypeProperty ;
@@ -95,7 +114,7 @@ eona:hasCountry rdf:type owl:DatatypeProperty ;
 
 ###  https://www.eona-x.eu/hasDescription
 eona:hasDescription rdf:type owl:DatatypeProperty ;
-                    rdfs:domain eona:Profil ;
+                    rdfs:domain eona:PostalAdress ;
                     rdfs:range xsd:string .
 
 
@@ -154,6 +173,12 @@ eona:hasPostalCode rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:string .
 
 
+###  https://www.eona-x.eu/hasProvider
+eona:hasProvider rdf:type owl:DatatypeProperty ;
+                 rdfs:domain eona:Metadata ;
+                 rdfs:range xsd:string .
+
+
 ###  https://www.eona-x.eu/hasRegion
 eona:hasRegion rdf:type owl:DatatypeProperty ;
                rdfs:domain eona:PostalAdress ;
@@ -164,6 +189,18 @@ eona:hasRegion rdf:type owl:DatatypeProperty ;
 eona:hasSiblings rdf:type owl:DatatypeProperty ;
                  rdfs:domain eona:Profil ;
                  rdfs:range xsd:int .
+
+
+###  https://www.eona-x.eu/hasSubRegion
+eona:hasSubRegion rdf:type owl:DatatypeProperty ;
+                  rdfs:domain eona:PostalAdress ;
+                  rdfs:range xsd:string .
+
+
+###  https://www.eona-x.eu/hasWebAdress
+eona:hasWebAdress rdf:type owl:DatatypeProperty ;
+                  rdfs:domain eona:Metadata ;
+                  rdfs:range xsd:string .
 
 
 #################################################################
@@ -323,6 +360,10 @@ eona:LifeQuality rdf:type owl:Class ;
 ###  https://www.eona-x.eu/Logistic
 eona:Logistic rdf:type owl:Class ;
               rdfs:subClassOf eona:Service .
+
+
+###  https://www.eona-x.eu/Metadata
+eona:Metadata rdf:type owl:Class .
 
 
 ###  https://www.eona-x.eu/Mobility
