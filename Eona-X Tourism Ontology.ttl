@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_semantics_test.ttl#> .
+@prefix : <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl#> .
 @prefix dc: <http://purl.org/dc/terms> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,18 +6,18 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eona: <https://www.eona-x.eu/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_semantics_test.ttl#> .
+@base <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl> .
 
-<https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_semantics_test.ttl> rdf:type owl:Ontology ;
-                                                                                                   owl:versionIRI <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/eona_semantics_test.ttl> ;
-                                                                                                   <http://purl.org/dc/terms/description> "Ontologie de test pour le data catalog d'Eona-X, basée sur le fichier Xmind réalisée en juillet 2023."@fr ,
-                                                                                                                                          "Testing Data Catalog Ontology based on the Xmind file."@en ;
-                                                                                                   <http://purl.org/dc/terms/issued> "2024-05-20" ;
-                                                                                                   <http://purl.org/dc/terms/modified> "2024-04-05" ;
-                                                                                                   <http://purl.org/dc/terms/publisher> "Eona-X" ;
-                                                                                                   <http://purl.org/dc/terms/title> "Eona-X Data Catalog Test Ontology"@en ;
-                                                                                                   rdfs:seeAlso "https://github.com/Max-Bld/eonax_ontology_prototype" ;
-                                                                                                   owl:versionInfo "0.2" .
+<https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl> rdf:type owl:Ontology ;
+                                                                                                           owl:versionIRI <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl> ;
+                                                                                                           <http://purl.org/dc/terms/description> "Ontologie de test pour le data catalog d'Eona-X, basée sur le fichier Xmind réalisée en juillet 2023."@fr ,
+                                                                                                                                                  "Testing Data Catalog Ontology based on the Xmind file."@en ;
+                                                                                                           <http://purl.org/dc/terms/issued> "2024-05-20" ;
+                                                                                                           <http://purl.org/dc/terms/modified> "2024-07-12" ;
+                                                                                                           <http://purl.org/dc/terms/publisher> "Eona-X" ;
+                                                                                                           <http://purl.org/dc/terms/title> "Eona-X Data Catalog Test Ontology"@en ;
+                                                                                                           rdfs:seeAlso "https://github.com/Max-Bld/eonax_ontology_prototype" ;
+                                                                                                           owl:versionInfo "0.2" .
 
 #################################################################
 #    Annotation properties
