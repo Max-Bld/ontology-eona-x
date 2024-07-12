@@ -114,11 +114,6 @@ eona:hasCroCode rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf eona:hasCode .
 
 
-###  https://www.eona-x.eu/hasIataCode
-eona:hasIataCode rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf eona:hasCode .
-
-
 ###  https://www.eona-x.eu/hasLatitude
 eona:hasLatitude rdf:type owl:DatatypeProperty ;
                  rdfs:domain eona:ServiceEquipments ;
