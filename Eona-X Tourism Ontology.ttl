@@ -99,6 +99,26 @@ eona:accessedWhen rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string .
 
 
+###  https://www.eona-x.eu/hasChainCode
+eona:hasChainCode rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf eona:hasCode .
+
+
+###  https://www.eona-x.eu/hasCode
+eona:hasCode rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://www.eona-x.eu/hasCroCode
+eona:hasCroCode rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf eona:hasCode .
+
+
+###  https://www.eona-x.eu/hasIataCode
+eona:hasIataCode rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf eona:hasCode .
+
+
 ###  https://www.eona-x.eu/hasLatitude
 eona:hasLatitude rdf:type owl:DatatypeProperty ;
                  rdfs:domain eona:ServiceEquipments ;
