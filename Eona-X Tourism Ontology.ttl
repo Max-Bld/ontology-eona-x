@@ -11,7 +11,7 @@
 <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl> rdf:type owl:Ontology ;
                                                                                                            owl:versionIRI <https://raw.githubusercontent.com/Max-Bld/eonax_ontology_prototype/main/Eona-X%20Tourism%20Ontology.ttl> ;
                                                                                                            <http://purl.org/dc/terms/description> "Ontologie de test pour le data catalog d'Eona-X, basée sur le fichier Xmind réalisée en juillet 2023."@fr ,
-                                                                                                                                                  "Testing Data Catalog Ontology based on the Xmind file."@en ;
+                                                                                                                                                  "Testing Data Catalog Ontology based on the Xmind file of the Semantic Search realized during summer 2023."@en ;
                                                                                                            <http://purl.org/dc/terms/issued> "2024-05-20" ;
                                                                                                            <http://purl.org/dc/terms/modified> "2024-07-12" ;
                                                                                                            <http://purl.org/dc/terms/publisher> "Eona-X" ;
