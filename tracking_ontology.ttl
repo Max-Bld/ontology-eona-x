@@ -6,14 +6,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.eona-x.eu/ontology/tracking/> .
 
-<http://www.eona-x.eu/ontology/tracking> rdf:type owl:Ontology .
+<http://www.eona-x.eu/ontology/tracking> rdf:type owl:Ontology ;
+                                          rdfs:seeAlso "https://raw.githubusercontent.com/EonaX/ontology-eona-x/main/tracking_ontology.ttl?token=GHSAT0AAAAAACP3GRKPK4A72XGHGNGJOBVQZV3TMUA" .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.eona-x.eu/ontology/tracking#Imports
-:Imports rdf:type owl:ObjectProperty ;
+###  http://www.eona-x.eu/ontology/tracking#imports
+:imports rdf:type owl:ObjectProperty ;
          rdfs:domain :Ontology ;
          rdfs:range :Ontology .
 
