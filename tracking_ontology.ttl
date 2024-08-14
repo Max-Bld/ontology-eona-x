@@ -1,10 +1,10 @@
-@prefix : <http://www.eona-x.eu/ontology/tracking/> .
+@prefix : <http://www.eona-x.eu/ontology/tracking#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.eona-x.eu/ontology/tracking/> .
+@base <http://www.eona-x.eu/ontology/tracking#> .
 
 <http://www.eona-x.eu/ontology/tracking> rdf:type owl:Ontology ;
                                           rdfs:seeAlso "https://raw.githubusercontent.com/EonaX/ontology-eona-x/main/tracking_ontology.ttl?token=GHSAT0AAAAAACP3GRKPK4A72XGHGNGJOBVQZV3TMUA" .
@@ -13,7 +13,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.eona-x.eu/ontology/tracking/imports
+###  http://www.eona-x.eu/ontology/tracking#imports
 :imports rdf:type owl:ObjectProperty ;
          rdfs:domain :Ontology ;
          rdfs:range :Ontology .
@@ -23,32 +23,32 @@
 #    Data properties
 #################################################################
 
-###  http://www.eona-x.eu/ontology/tracking/hasBaseUri
+###  http://www.eona-x.eu/ontology/tracking#hasBaseUri
 :hasBaseUri rdf:type owl:DatatypeProperty ;
             rdfs:domain :Ontology .
 
 
-###  http://www.eona-x.eu/ontology/tracking/hasDomain
+###  http://www.eona-x.eu/ontology/tracking#hasDomain
 :hasDomain rdf:type owl:DatatypeProperty ;
            rdfs:domain :Ontology .
 
 
-###  http://www.eona-x.eu/ontology/tracking/hasDownloadUrl
+###  http://www.eona-x.eu/ontology/tracking#hasDownloadUrl
 :hasDownloadUrl rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Ontology .
 
 
-###  http://www.eona-x.eu/ontology/tracking/isNamed
+###  http://www.eona-x.eu/ontology/tracking#isNamed
 :isNamed rdf:type owl:DatatypeProperty ;
          rdfs:domain :Ontology .
 
 
-###  http://www.eona-x.eu/ontology/tracking/isProvidedBy
+###  http://www.eona-x.eu/ontology/tracking#isProvidedBy
 :isProvidedBy rdf:type owl:DatatypeProperty ;
               rdfs:domain :Ontology .
 
 
-###  http://www.eona-x.eu/ontology/tracking/isSerializedIn
+###  http://www.eona-x.eu/ontology/tracking#isSerializedIn
 :isSerializedIn rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Ontology .
 
@@ -57,7 +57,7 @@
 #    Classes
 #################################################################
 
-###  http://www.eona-x.eu/ontology/tracking/Ontology
+###  http://www.eona-x.eu/ontology/tracking#Ontology
 :Ontology rdf:type owl:Class .
 
 
