@@ -53,6 +53,10 @@
                 rdfs:domain :Ontology .
 
 
+###  http://www.eona-x.eu/ontology/tracking/hasNumberOfClass
+<http://www.eona-x.eu/ontology/tracking/hasNumberOfClass> rdf:type owl:DatatypeProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
